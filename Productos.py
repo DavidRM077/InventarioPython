@@ -1,7 +1,10 @@
+# Libreria para controlar el tiempo del menu
 import time as tp
 
+# Diccionario donde se almacenaran los productos
 Producto = {} 
 
+# Funcion que hara el papel de agregar productos al diccionario
 def Agregar_Producto(Datos):
     
     print("Siga las Instrucciones para registrar el producto en el inventario. \n")
@@ -18,6 +21,11 @@ def Agregar_Producto(Datos):
 def Eliminar_Producto():
   Nombre = input("Introduzca el nombre del producto")
   del Producto[Nombre]
+
+def Buscar_Producto():
+  Nombre = input("Introduzca el nombre del Producto")
+  Producto[Nombre]
+  print(f"El Producto que desea es: {Producto[Nombre]}")
 
 while True:
  tp.sleep(5)
@@ -50,7 +58,7 @@ while True:
   case 4:
      print(Producto)
   case 5:
-     "Buscar Producto"
+     Buscar_Producto()
   case 6:
      "Saliendo del inventario"
      break
