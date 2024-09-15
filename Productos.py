@@ -22,9 +22,15 @@ def Eliminar_Producto():
   Nombre = input("Introduzca el nombre del producto")
   del Producto[Nombre]
 
+def Actualizar_Producto():
+  Nombre = input("Introduzca el nombre del Producto que desea Actualizar")
+  Cantidad = input("Introduzca la cantidad a modificar del producto")
+  Producto[Nombre].update({"Cantidad" : Cantidad})
+
 def Buscar_Producto():
   Nombre = input("Introduzca el nombre del Producto")
   Producto[Nombre]
+  
   print(f"El Producto que desea es: {Producto[Nombre]}")
 
 while True:
@@ -50,6 +56,7 @@ while True:
       Respuesta = input("Desea Registrar Otro Producto?")
 
   case 2:
+   Actualizar_Producto()
    print("Actualizado")
    
   case 3:
@@ -59,6 +66,7 @@ while True:
      print(Producto)
   case 5:
      Buscar_Producto()
+
   case 6:
      "Saliendo del inventario"
      break
